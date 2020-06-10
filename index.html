@@ -1,0 +1,246 @@
+<script src="https://threejs.org/build/three.min.js"></script>
+<link rel="stylesheet" type="text/css" href="index.css" >
+<div>
+    <form id="gui" > Scale
+    <input type="range" id="scale" name="Scale" min="50" max="200" value="100"><br>
+        
+    <br>
+    <label for="wrapColor">Choose a wrap color:</label>
+    <select name="wrapColor" id="wrapColor">
+      <option value="green">Green</option>
+      <option value="blue">Blue</option>
+      <option value="red">Red</option>
+    </select>
+        
+        
+    <br>
+    <br>
+        
+    <label for="ribbonColor">Choose a ribbon color:</label>
+    <select name="ribbonColor" id="ribbonColor">
+      <option value="green">Green</option>
+      <option value="blue">Blue</option>
+      <option value="red">Red</option>
+    </select>
+        
+    </form>
+</div>
+<div id="subframe">
+    <div id="container"></div>
+</div>
+<!--<script src="main.js" type ="module"></script>-->
+
+
+<script type="module">
+
+			import * as THREE from './build/three.module.js';
+
+			import Stats from './examples/jsm/libs/stats.module.js';
+
+			import { ColladaLoader } from './examples/jsm/loaders/ColladaLoader.js';
+			import { OrbitControls } from './examples/jsm/controls/OrbitControls.js';
+
+			var container, stats, clock, controls;
+			var camera, scene, renderer, mixer, avatar, CANVAS_WIDTH = 500, CANVAS_HEIGHT = 500;
+
+            var greenWrapGreenRibbon = new THREE.TextureLoader().load( './img/PresentColor0101.png' );
+            var greenWrapBlueRibbon = new THREE.TextureLoader().load( './img/PresentColor0102.png' );
+            var greenWrapRedRibbon = new THREE.TextureLoader().load( './img/PresentColor0103.png' );
+    
+            var blueWrapGreenRibbon = new THREE.TextureLoader().load( './img/PresentColor0201.png' );
+            var blueWrapBlueRibbon = new THREE.TextureLoader().load( './img/PresentColor0202.png' );
+            var blueWrapRedRibbon = new THREE.TextureLoader().load( './img/PresentColor0203.png' );
+    
+            var redWrapGreenRibbon = new THREE.TextureLoader().load( './img/PresentColor0301.png' );
+            var redWrapBlueRibbon = new THREE.TextureLoader().load( './img/PresentColor0302.png' );
+            var redWrapRedRibbon = new THREE.TextureLoader().load( './img/PresentColor0303.png' );
+    
+    
+            var roughness = new THREE.TextureLoader().load( './img/PresentRoughness.png');
+            var metallic = new THREE.TextureLoader().load( './img/PresentMetallic.png');
+            var normal = new THREE.TextureLoader().load( './img/PresentNormal.png');
+    
+    
+
+			init();
+			animate();
+
+			function init() {
+
+				container = document.getElementById( 'container' );
+
+				camera = new THREE.PerspectiveCamera( 5, CANVAS_HEIGHT/ CANVAS_HEIGHT, 1, 1000 );
+				camera.position.set( 1, 1, 1 );
+
+				scene = new THREE.Scene();
+
+				clock = new THREE.Clock();
+
+				// collada
+
+				var loader = new ColladaLoader();
+				loader.load( './models/GiftBox.dae', function ( collada ) {
+
+					var animations = collada.animations;
+					avatar = collada.scene;
+                    
+
+					avatar.traverse( function ( node ) {
+
+						if ( node instanceof THREE.Mesh ) {
+
+							node.frustumCulled = false;
+                            node.material = new THREE.MeshPhysicalMaterial( {
+                                                        color: greenWrapGreenRibbon, 
+                                                        roughness: 1,
+                                                        metalness: 1,
+                                                        roughnessMap: roughness,
+                                                        metalnessMap: metallic,
+                                                        normalMap: normal
+                                                    } );
+
+						}
+
+					} );
+
+//					mixer = new THREE.AnimationMixer( avatar );
+//					mixer.clipAction( animations[ 0 ] ).play();
+
+					scene.add( avatar );
+                    
+                   
+
+                    
+				} );
+                
+                
+                 scene.traverse( function (child) {
+                      if ( child instanceof THREE.Mesh ) {
+                          console.log( child.name );
+                      }
+                  });
+                
+                
+
+				//
+
+				/*var gridHelper = new THREE.GridHelper( 10, 20 );
+				scene.add( gridHelper );
+*/
+				//
+
+				var ambientLight = new THREE.AmbientLight( 0xffffff, 0.2 );
+				scene.add( ambientLight );
+
+				var pointLight = new THREE.PointLight( 0xffffff, 0.8 );
+				scene.add( camera );
+				camera.add( pointLight );
+
+				//
+
+				renderer = new THREE.WebGLRenderer( { antialias: true, alpha: true } );
+				renderer.setPixelRatio( CANVAS_WIDTH / CANVAS_HEIGHT );
+				renderer.setSize( CANVAS_WIDTH, CANVAS_HEIGHT );//window.innerWidth, window.innerHeight );
+				container.appendChild( renderer.domElement );
+
+				//
+
+				controls = new OrbitControls( camera, renderer.domElement );
+				controls.screenSpacePanning = true;
+				controls.minDistance = 2;
+				controls.maxDistance = 10;
+				controls.target.set( 0, 0.07, 0 );
+				controls.update();
+
+				//
+
+				//
+
+				window.addEventListener( 'resize', onWindowResize, false );
+
+			}
+
+			function onWindowResize() {
+
+				camera.aspect = CANVAS_WIDTH / CANVAS_HEIGHT;
+				camera.updateProjectionMatrix();
+
+				renderer.setSize( CANVAS_WIDTH, CANVAS_HEIGHT );
+
+			}
+
+			function animate() {
+
+                var scale = document.getElementById( "scale" ).value / 100;
+                scene.traverse( function (child) {
+                      if ( child instanceof THREE.Mesh ) {
+                          child.scale.x = child.scale.y = child.scale.z = scale;
+                          var wrap = document.getElementById("wrapColor").value;
+                          var ribbon = document.getElementById("ribbonColor").value;
+                          
+          
+                          
+                          
+                          if (wrap == "green" && ribbon == "green"){
+                            child.material.map = greenWrapGreenRibbon;
+                          }
+                          if (wrap == "green" && ribbon == "blue"){
+                            child.material.map = greenWrapBlueRibbon;
+                          }
+                          if (wrap == "green" && ribbon == "red"){
+                            child.material.map = greenWrapRedRibbon;
+                          }
+                          if (wrap == "blue" && ribbon == "green"){
+                            child.material.map = blueWrapGreenRibbon;
+                          }
+                          if (wrap == "blue" && ribbon == "blue"){
+                            child.material.map = blueWrapBlueRibbon;
+                          }
+                          if (wrap == "blue" && ribbon == "red"){
+                            child.material.map = blueWrapRedRibbon;
+                          }
+                          if (wrap == "red" && ribbon == "green"){
+                            child.material.map = redWrapGreenRibbon;
+                          }
+                          if (wrap == "red" && ribbon == "blue"){
+                            child.material.map = redWrapBlueRibbon;
+                          }
+                          if (wrap == "red" && ribbon == "red"){
+                            child.material.map = redWrapRedRibbon;
+                          }
+                          
+                          child.material.needsUpdate = true;
+                         
+                      }
+                  });
+                
+                
+				requestAnimationFrame( animate );
+
+				render();
+		
+                
+                
+              //  requestAnimationFrame( animate );
+
+
+
+			}
+
+			function render() {
+
+				var delta = clock.getDelta();
+
+				if ( mixer !== undefined ) {
+
+					mixer.update( delta );
+
+				}
+                
+
+                
+				renderer.render( scene, camera );
+
+			}
+
+		</script> 
