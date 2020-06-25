@@ -70,7 +70,14 @@
 
         <br>
         <br>
-        <input type="text" id="lname" name="lname" value="Teste" onkeydown="changeText(this.value)">
+        <label for="template">Line 1:</label>
+        <input type="text" id="lname" name="lname" value="Line 1" onkeydown="changeText(this.value)">
+        <br>
+        <label for="template">Line 2:</label>
+        <input type="text" id="lname2" name="lname2" value="Line 2" onkeydown="changeText(this.value)">
+        <br>
+        <label for="template">Line 3:</label>
+        <input type="text" id="lname3" name="lname3" value="Line 3" onkeydown="changeText(this.value)">
         <br><br>
             
             
@@ -87,15 +94,15 @@
         var camera = new BABYLON.ArcRotateCamera("Camera", 1, 1, 5, new BABYLON.Vector3(0, 0, 0), scene);
         var box = null;
 
-        var planeWidth = 0.25;
-        var planeHeight = 0.25;
+        var planeWidth = 0.35;
+        var planeHeight = 0.35;
 
         var writingPlane = BABYLON.MeshBuilder.CreatePlane("plane", {width:planeWidth, height:planeHeight}, scene);
         var size = 512;
         var dynamicTexture = new BABYLON.DynamicTexture("DynamicTexture", size, scene);
-        var font_size = 96;
+        var font_size = 90;
         var font_type = "Arial";
-        var font = font_size + "px " + font_type;
+        var font = "bold " + font_size + "px " + font_type;
         
 
 
@@ -130,6 +137,8 @@
                 dynamicTexture.dispose();
             }
             dynamicTexture = new BABYLON.DynamicTexture("DynamicTexture", size, scene);
+            var ctx = dynamicTexture.getContext();
+            ctx.clearRect(0, 0, size, size)
             
             //Draw text
             changeText();
@@ -152,7 +161,7 @@
                 
                 //    scene.createDefaultEnvironment();
             });
-                  
+            
         }
         
         
@@ -163,7 +172,7 @@
                 size = 512;
             }
             if (document.getElementById( 'boxPicker' ).value == "Box02.gltf"){
-                size = 256;
+                size = 512;
             }
             console.log( size );
             changeBox( document.getElementById( 'boxPicker' ).value );
@@ -175,15 +184,30 @@
         
         // *********************
         function changeText(){
+            var ctx = dynamicTexture.getContext();
+            ctx.clearRect(0, 0, size, size)
             if (document.getElementById( 'boxPicker' ).value == "Box01.gltf"){
-                dynamicTexture.drawText(document.getElementById( 'lname' ).value, null, null, font, "#008000", "transparent", true);
+                dynamicTexture.drawText(document.getElementById( 'lname' ).value, null, 170, font, "#6ACCC4", "transparent", true);
+                dynamicTexture.drawText(document.getElementById( 'lname2' ).value, null, 270, font, "#6ACCC4", "transparent", true);
+                dynamicTexture.drawText(document.getElementById( 'lname3' ).value, null, 370, font, "#6ACCC4", "transparent", true);
             }
             if (document.getElementById( 'boxPicker' ).value == "Box02.gltf"){
-                dynamicTexture.drawText(document.getElementById( 'lname' ).value, null, null, font, "#FF0000", "transparent", true);
+                dynamicTexture.drawText(document.getElementById( 'lname' ).value, null, 170, font, "#FF0000", "transparent", true);
+                dynamicTexture.drawText(document.getElementById( 'lname2' ).value, null, 270, font, "#FF0000", "transparent", true);
+                dynamicTexture.drawText(document.getElementById( 'lname3' ).value, null, 370, font, "#FF0000", "transparent", true);
             }
-            else{
-                dynamicTexture.drawText(document.getElementById( 'lname' ).value, null, null, font, "#000000", "transparent", true);
+            if (document.getElementById( 'boxPicker' ).value == "Box03.gltf"){
+                dynamicTexture.drawText(document.getElementById( 'lname' ).value, null, 170, font, "#e71587", "transparent", true);
+                dynamicTexture.drawText(document.getElementById( 'lname2' ).value, null, 270, font, "#e71587", "transparent", true);
+                dynamicTexture.drawText(document.getElementById( 'lname3' ).value, null, 370, font, "#e71587", "transparent", true);
             }
+            if (document.getElementById( 'boxPicker' ).value == "Box04.gltf"){
+                dynamicTexture.drawText(document.getElementById( 'lname' ).value, null, 170, font, "#8aff00", "transparent", true);
+                dynamicTexture.drawText(document.getElementById( 'lname2' ).value, null, 270, font, "#8aff00", "transparent", true);
+                dynamicTexture.drawText(document.getElementById( 'lname3' ).value, null, 370, font, "#8aff00", "transparent", true);
+            }
+                      
+            
         }
         // *********************
         
@@ -195,6 +219,7 @@
         // Register a render loop to repeatedly render the scene
         engine.runRenderLoop(function () {
                 scene.render();
+            changeText();
         });
 
         // Watch for browser/canvas resize events
