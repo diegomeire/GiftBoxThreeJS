@@ -1,0 +1,1009 @@
+Exporter version: 6.4.1, Blender version: 2.82 (sub 7)
+========= Conversion from Blender to Babylon.js =========
+	Scene settings used :
+		Inline textures     :  false
+		Material Type       :  PBR
+		Positions Precision :  4
+		Normals Precision   :  3
+		UVs Precision       :  3
+		Vert Color Precision:  3
+		Mat Weight Precision:  2
+		Keep Z-up r-handed  :  no
+		Texture directory   :  /Users/diegemiere/Documents/Sites/Threejs/models/
+	Python World class constructor completed
+	processing begun of camera (UniversalCamera):  Camera
+	processing begun of node:  0.gltf
+	processing begun of node:  ground_plane_n3d
+	processing begun of node:  BOX
+	processing begun of node:  box_lid#2
+	processing begun of mesh:  box lid#2_0
+		processing begun of material:  Lisanne_Eraser
+		Custom split normals with tangents being used
+		num positions      :  29
+		num normals        :  29
+		num tangents       :  116
+		num uvs            :  58
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  14
+	processing begun of mesh:  box lid#2_1
+		processing begun of material:  batha rt
+			processing texture 
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		Custom split normals with tangents being used
+		num positions      :  14
+		num normals        :  14
+		num tangents       :  56
+		num uvs            :  28
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  8
+	processing begun of mesh:  box lid#2_2
+		processing begun of material:  neongalactic
+			processing texture 
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		Custom split normals with tangents being used
+		num positions      :  33
+		num normals        :  33
+		num tangents       :  132
+		num uvs            :  66
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  18
+	processing begun of node:  box_1#2
+	processing begun of mesh:  box 1#2_0
+		processing begun of material:  Lisanne_Eraser
+		registered as also a user of material:  Lisanne_Eraser
+		Custom split normals with tangents being used
+		num positions      :  36
+		num normals        :  36
+		num tangents       :  144
+		num uvs            :  72
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  20
+	processing begun of mesh:  box 1#2_1
+		processing begun of material:  neongalactic
+		registered as also a user of material:  neongalactic
+		Custom split normals with tangents being used
+		num positions      :  153
+		num normals        :  153
+		num tangents       :  612
+		num uvs            :  306
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  69
+	processing begun of mesh:  box 1#2_2
+		processing begun of material:  batha rt
+		registered as also a user of material:  batha rt
+		Custom split normals with tangents being used
+		num positions      :  8
+		num normals        :  8
+		num tangents       :  32
+		num uvs            :  16
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  4
+	processing begun of node:  BOX#8
+	processing begun of mesh:  box_1#10
+		processing begun of material:  Color H06
+		Custom split normals with tangents being used
+		num positions      :  188
+		num normals        :  188
+		num tangents       :  752
+		num uvs            :  376
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  93
+	processing begun of mesh:  box_lid#10
+		processing begun of material:  Color H06
+		registered as also a user of material:  Color H06
+		Custom split normals with tangents being used
+		num positions      :  76
+		num normals        :  76
+		num tangents       :  304
+		num uvs            :  152
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  40
+	processing begun of node:  BOX#9
+	processing begun of mesh:  box_1#11
+		processing begun of material:  Color H06
+		registered as also a user of material:  Color H06
+		Custom split normals with tangents being used
+		num positions      :  193
+		num normals        :  193
+		num tangents       :  772
+		num uvs            :  386
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  93
+	processing begun of mesh:  box_lid#11
+		processing begun of material:  Color H06
+		registered as also a user of material:  Color H06
+		Custom split normals with tangents being used
+		num positions      :  79
+		num normals        :  79
+		num tangents       :  316
+		num uvs            :  158
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  40
+	processing begun of node:  Component#1
+	processing begun of mesh:  BOX#13
+		processing begun of material:  [Color L02] copy
+		Custom split normals with tangents being used
+		num positions      :  343
+		num normals        :  343
+		num tangents       :  1372
+		num uvs            :  686
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  164
+	processing begun of mesh:  MIN#16
+		processing begun of material:  Screen Shot 2020-05-15 at 15.05.30
+			processing texture 
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		Custom split normals with tangents being used
+		num positions      :  191
+		num normals        :  191
+		num tangents       :  764
+		num uvs            :  382
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  84
+	processing begun of mesh:  LUSH
+		processing begun of material:  [Color L02] copy
+		registered as also a user of material:  [Color L02] copy
+		Custom split normals with tangents being used
+		num positions      :  115
+		num normals        :  115
+		num tangents       :  460
+		num uvs            :  230
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  107
+	processing begun of mesh:  hey
+		processing begun of material:  Color L05
+		Custom split normals with tangents being used
+		num positions      :  89
+		num normals        :  89
+		num tangents       :  356
+		num uvs            :  178
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  85
+	processing begun of camera (UniversalCamera):  PerspectiveCamera
+	processing begun of mesh:  MIN#1
+		processing begun of material:  [Color L02] copy
+		registered as also a user of material:  [Color L02] copy
+		Custom split normals with tangents being used
+		num positions      :  68
+		num normals        :  68
+		num tangents       :  272
+		num uvs            :  136
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  32
+	processing begun of mesh:  LUSH.001
+		mesh is an instance of :  LUSH.  Processing halted.
+	processing begun of mesh:  HAPPY_BIRTHDAY_M#1
+		processing begun of material:  [Color L02] copy
+		registered as also a user of material:  [Color L02] copy
+		Custom split normals with tangents being used
+		num positions      :  332
+		num normals        :  332
+		num tangents       :  1328
+		num uvs            :  664
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  310
+	processing begun of mesh:  MIN#9
+		mesh is an instance of :  MIN#1.  Processing halted.
+	processing begun of mesh:  LUSH.002
+		mesh is an instance of :  LUSH.  Processing halted.
+	processing begun of mesh:  HAPPY_BIRTHDAY_M#1.001
+		mesh is an instance of :  HAPPY_BIRTHDAY_M#1.  Processing halted.
+	processing begun of mesh:  MIN#20
+		processing begun of material:  [Color L02] copy
+		registered as also a user of material:  [Color L02] copy
+		Custom split normals with tangents being used
+		num positions      :  76
+		num normals        :  76
+		num tangents       :  304
+		num uvs            :  152
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  32
+	processing begun of mesh:  LUSH.004
+		mesh is an instance of :  LUSH.  Processing halted.
+	processing begun of mesh:  JENNY
+		processing begun of material:  Lisanne_Tool_Bag_01
+		Custom split normals with tangents being used
+		num positions      :  70
+		num normals        :  70
+		num tangents       :  280
+		num uvs            :  140
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  60
+	processing begun of mesh:  MIN#2
+		processing begun of material:  Color B03
+		Custom split normals with tangents being used
+		num positions      :  76
+		num normals        :  76
+		num tangents       :  304
+		num uvs            :  152
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  32
+	processing begun of mesh:  LUSH.005
+		mesh is an instance of :  LUSH.  Processing halted.
+	processing begun of mesh:  KEEP_WELL_LOVELY
+		processing begun of material:  Color B03
+		registered as also a user of material:  Color B03
+		Custom split normals with tangents being used
+		num positions      :  210
+		num normals        :  210
+		num tangents       :  840
+		num uvs            :  420
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  186
+	processing begun of mesh:  MIN#22
+		processing begun of material:  Color F05
+		Custom split normals with tangents being used
+		num positions      :  76
+		num normals        :  76
+		num tangents       :  304
+		num uvs            :  152
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  32
+	processing begun of mesh:  LUSH.006
+		mesh is an instance of :  LUSH.  Processing halted.
+	processing begun of mesh:  18__SARA
+		processing begun of material:  Lisanne_Tool_Bag_01
+		registered as also a user of material:  Lisanne_Tool_Bag_01
+		Custom split normals with tangents being used
+		num positions      :  229
+		num normals        :  229
+		num tangents       :  916
+		num uvs            :  458
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  223
+	processing begun of mesh:  BOX#10
+		processing begun of material:  Color A05
+		Custom split normals with tangents being used
+		num positions      :  337
+		num normals        :  337
+		num tangents       :  1348
+		num uvs            :  674
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  164
+	processing begun of mesh:  MAXI#5
+		processing begun of material:  neongalactic
+		registered as also a user of material:  neongalactic
+		Custom split normals with tangents being used
+		num positions      :  24
+		num normals        :  24
+		num tangents       :  96
+		num uvs            :  48
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  MIN#24
+		processing begun of material:  Color I01
+		Custom split normals with tangents being used
+		num positions      :  75
+		num normals        :  75
+		num tangents       :  300
+		num uvs            :  150
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  32
+	processing begun of mesh:  LUSH.007
+		mesh is an instance of :  LUSH.  Processing halted.
+	processing begun of mesh:  BATH__TIME
+		processing begun of material:  Color F05
+		registered as also a user of material:  Color F05
+		Custom split normals with tangents being used
+		num positions      :  120
+		num normals        :  120
+		num tangents       :  480
+		num uvs            :  240
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  110
+	processing begun of mesh:  MIN#17
+		processing begun of material:  246225e13ce25e30d515eb2e227f460c
+			processing texture 
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		Custom split normals with tangents being used
+		num positions      :  76
+		num normals        :  76
+		num tangents       :  304
+		num uvs            :  152
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  32
+	processing begun of mesh:  LUSH.008
+		mesh is an instance of :  LUSH.  Processing halted.
+	processing begun of mesh:  30TH
+		processing begun of material:  Lisanne_Tool_Bag_01
+		registered as also a user of material:  Lisanne_Tool_Bag_01
+		Custom split normals with tangents being used
+		num positions      :  144
+		num normals        :  144
+		num tangents       :  576
+		num uvs            :  288
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  138
+	processing begun of mesh:  MIDI_SQUARE#6
+		processing begun of material:  Screen Shot 2020-05-15 at 15.05.30
+		registered as also a user of material:  Screen Shot 2020-05-15 at 15.05.30
+		Custom split normals with tangents being used
+		num positions      :  24
+		num normals        :  24
+		num tangents       :  96
+		num uvs            :  48
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  MAXI_EDXTRA#2
+		processing begun of material:  Color A05
+		registered as also a user of material:  Color A05
+		Custom split normals with tangents being used
+		num positions      :  26
+		num normals        :  26
+		num tangents       :  104
+		num uvs            :  52
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  MAXI_EDXTRA#3
+		processing begun of material:  [Color L02] copy
+		registered as also a user of material:  [Color L02] copy
+		Custom split normals with tangents being used
+		num positions      :  24
+		num normals        :  24
+		num tangents       :  96
+		num uvs            :  48
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  MIN#11
+		processing begun of material:  Screen Shot 2020-05-18 at 12.02.35
+			processing texture 
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		Custom split normals with tangents being used
+		num positions      :  76
+		num normals        :  76
+		num tangents       :  304
+		num uvs            :  152
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  32
+	processing begun of mesh:  LUSH.009
+		mesh is an instance of :  LUSH.  Processing halted.
+	processing begun of mesh:  MAXI#1
+		processing begun of material:  Color H06
+		registered as also a user of material:  Color H06
+		Custom split normals with tangents being used
+		num positions      :  24
+		num normals        :  24
+		num tangents       :  96
+		num uvs            :  48
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  MAXI#2
+		processing begun of material:  Color A05
+		registered as also a user of material:  Color A05
+		Custom split normals with tangents being used
+		num positions      :  24
+		num normals        :  24
+		num tangents       :  96
+		num uvs            :  48
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  MAXI#3
+		processing begun of material:  [Color L02] copy
+		registered as also a user of material:  [Color L02] copy
+		Custom split normals with tangents being used
+		num positions      :  24
+		num normals        :  24
+		num tangents       :  96
+		num uvs            :  48
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  MIN#26
+		processing begun of material:  batha rt
+		registered as also a user of material:  batha rt
+		Custom split normals with tangents being used
+		num positions      :  77
+		num normals        :  77
+		num tangents       :  308
+		num uvs            :  154
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  32
+	processing begun of mesh:  LUSH.010
+		mesh is an instance of :  LUSH.  Processing halted.
+	processing begun of mesh:  NICOLE
+		processing begun of material:  Lisanne_Tool_Bag_01
+		registered as also a user of material:  Lisanne_Tool_Bag_01
+		Custom split normals with tangents being used
+		num positions      :  138
+		num normals        :  138
+		num tangents       :  552
+		num uvs            :  276
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  130
+	processing begun of mesh:  MIN#4
+		mesh is an instance of :  MIN#26.  Processing halted.
+	processing begun of mesh:  LUSH.011
+		mesh is an instance of :  LUSH.  Processing halted.
+	processing begun of mesh:  HELLO_MUM
+		processing begun of material:  [Color L02] copy
+		registered as also a user of material:  [Color L02] copy
+		Custom split normals with tangents being used
+		num positions      :  161
+		num normals        :  161
+		num tangents       :  644
+		num uvs            :  322
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  147
+	processing begun of mesh:  MIN#13
+		processing begun of material:  246225e13ce25e30d515eb2e227f460c
+		registered as also a user of material:  246225e13ce25e30d515eb2e227f460c
+		Custom split normals with tangents being used
+		num positions      :  77
+		num normals        :  77
+		num tangents       :  308
+		num uvs            :  154
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  32
+	processing begun of mesh:  LUSH.012
+		mesh is an instance of :  LUSH.  Processing halted.
+	processing begun of mesh:  JOHN
+		processing begun of material:  Lisanne_Tool_Bag_01
+		registered as also a user of material:  Lisanne_Tool_Bag_01
+		Custom split normals with tangents being used
+		num positions      :  106
+		num normals        :  106
+		num tangents       :  424
+		num uvs            :  212
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  100
+	processing begun of mesh:  MIN#15
+		processing begun of material:  Screen Shot 2020-05-15 at 15.55.15
+			processing texture 
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		Custom split normals with tangents being used
+		num positions      :  191
+		num normals        :  191
+		num tangents       :  764
+		num uvs            :  382
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  84
+	processing begun of mesh:  LUSH.013
+		mesh is an instance of :  LUSH.  Processing halted.
+	processing begun of mesh:  OK?
+		processing begun of material:  Color L05
+		registered as also a user of material:  Color L05
+		Custom split normals with tangents being used
+		num positions      :  69
+		num normals        :  69
+		num tangents       :  276
+		num uvs            :  138
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  67
+	processing begun of mesh:  MIN#12
+		processing begun of material:  ce844b37fc969158b9e8504e990a986f
+			processing texture 
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		Custom split normals with tangents being used
+		num positions      :  76
+		num normals        :  76
+		num tangents       :  304
+		num uvs            :  152
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  32
+	processing begun of mesh:  LUSH.014
+		mesh is an instance of :  LUSH.  Processing halted.
+	processing begun of mesh:  MERRY_XMAS_JOE!
+		processing begun of material:  B&W DIAG
+			processing texture 
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		Custom split normals with tangents being used
+		num positions      :  726
+		num normals        :  726
+		num tangents       :  2904
+		num uvs            :  1452
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  315
+	processing begun of mesh:  MIN#14
+		processing begun of material:  B&W DIAG
+		registered as also a user of material:  B&W DIAG
+		Custom split normals with tangents being used
+		num positions      :  71
+		num normals        :  71
+		num tangents       :  284
+		num uvs            :  142
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  32
+	processing begun of mesh:  LUSH.015
+		mesh is an instance of :  LUSH.  Processing halted.
+	processing begun of mesh:  HI!
+		processing begun of material:  Color L05
+		registered as also a user of material:  Color L05
+		Custom split normals with tangents being used
+		num positions      :  26
+		num normals        :  26
+		num tangents       :  104
+		num uvs            :  52
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  18
+	processing begun of mesh:  MAXI_EDXTRA#4
+		processing begun of material:  Screen Shot 2020-05-15 at 15.05.30
+		registered as also a user of material:  Screen Shot 2020-05-15 at 15.05.30
+		Custom split normals with tangents being used
+		num positions      :  24
+		num normals        :  24
+		num tangents       :  96
+		num uvs            :  48
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  MIDI_SQUARE#4
+		processing begun of material:  Screen Shot 2020-05-15 at 15.05.30
+		registered as also a user of material:  Screen Shot 2020-05-15 at 15.05.30
+		Custom split normals with tangents being used
+		num positions      :  24
+		num normals        :  24
+		num tangents       :  96
+		num uvs            :  48
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  MAXI#4
+		processing begun of material:  Screen Shot 2020-05-15 at 15.05.30
+		registered as also a user of material:  Screen Shot 2020-05-15 at 15.05.30
+		Custom split normals with tangents being used
+		num positions      :  24
+		num normals        :  24
+		num tangents       :  96
+		num uvs            :  48
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  MIN#21
+		processing begun of material:  ba02bac712ccb1cef84efccef0d89f0a
+			processing texture 
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		Custom split normals with tangents being used
+		num positions      :  76
+		num normals        :  76
+		num tangents       :  304
+		num uvs            :  152
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  32
+	processing begun of mesh:  LUSH.016
+		mesh is an instance of :  LUSH.  Processing halted.
+	processing begun of mesh:  HAPPY_BIRTHDAY_R
+		processing begun of material:  Color A02
+		Custom split normals with tangents being used
+		num positions      :  388
+		num normals        :  388
+		num tangents       :  1552
+		num uvs            :  776
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  370
+	processing begun of mesh:  MIN#19
+		processing begun of material:  Lush_Xmas_03
+			processing texture 
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		Custom split normals with tangents being used
+		num positions      :  75
+		num normals        :  75
+		num tangents       :  300
+		num uvs            :  150
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  32
+	processing begun of mesh:  LUSH.017
+		mesh is an instance of :  LUSH.  Processing halted.
+	processing begun of mesh:  HAVE__A__BATH
+		processing begun of material:  Lush_Xmas_03
+		registered as also a user of material:  Lush_Xmas_03
+		Custom split normals with tangents being used
+		num positions      :  262
+		num normals        :  262
+		num tangents       :  1048
+		num uvs            :  524
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  128
+	processing begun of mesh:  MIN#18
+		processing begun of material:  Screen Shot 2020-05-15 at 15.05.30
+		registered as also a user of material:  Screen Shot 2020-05-15 at 15.05.30
+		Custom split normals with tangents being used
+		num positions      :  71
+		num normals        :  71
+		num tangents       :  284
+		num uvs            :  142
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  32
+	processing begun of mesh:  LUSH.018
+		mesh is an instance of :  LUSH.  Processing halted.
+	processing begun of mesh:  HAPPY_BIRTHDAY_K
+		processing begun of material:  Lisanne_Tool_Bag_01
+		registered as also a user of material:  Lisanne_Tool_Bag_01
+		Custom split normals with tangents being used
+		num positions      :  358
+		num normals        :  358
+		num tangents       :  1432
+		num uvs            :  716
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  340
+	processing begun of mesh:  MIDI_SQUARE
+		processing begun of material:  neongalactic
+		registered as also a user of material:  neongalactic
+		Custom split normals with tangents being used
+		num positions      :  24
+		num normals        :  24
+		num tangents       :  96
+		num uvs            :  48
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  MIN#23
+		processing begun of material:  neongalactic
+		registered as also a user of material:  neongalactic
+		Custom split normals with tangents being used
+		num positions      :  71
+		num normals        :  71
+		num tangents       :  284
+		num uvs            :  142
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  32
+	processing begun of mesh:  LUSH.019
+		mesh is an instance of :  LUSH.  Processing halted.
+	processing begun of mesh:  HAPPY_XMAS
+		processing begun of material:  Lisanne_Tool_Bag_01
+		registered as also a user of material:  Lisanne_Tool_Bag_01
+		Custom split normals with tangents being used
+		num positions      :  215
+		num normals        :  215
+		num tangents       :  860
+		num uvs            :  430
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  205
+	processing begun of mesh:  MIN#27
+		processing begun of material:  spots pink and red-01
+			processing texture 
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		Custom split normals with tangents being used
+		num positions      :  76
+		num normals        :  76
+		num tangents       :  304
+		num uvs            :  152
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  32
+	processing begun of mesh:  LUSH.020
+		mesh is an instance of :  LUSH.  Processing halted.
+	processing begun of mesh:  HAVE_A__GOOD_DAY
+		processing begun of material:  Color A02
+		registered as also a user of material:  Color A02
+		Custom split normals with tangents being used
+		num positions      :  330
+		num normals        :  330
+		num tangents       :  1320
+		num uvs            :  660
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  316
+	processing begun of mesh:  MIN#3
+		processing begun of material:  ce844b37fc969158b9e8504e990a986f
+		registered as also a user of material:  ce844b37fc969158b9e8504e990a986f
+		Custom split normals with tangents being used
+		num positions      :  71
+		num normals        :  71
+		num tangents       :  284
+		num uvs            :  142
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  32
+	processing begun of mesh:  LUSH.021
+		mesh is an instance of :  LUSH.  Processing halted.
+	processing begun of mesh:  MERRY_XMAS_JOE!.001
+		mesh is an instance of :  MERRY_XMAS_JOE!.  Processing halted.
+	processing begun of mesh:  MIDI_SQUARE#5
+		processing begun of material:  Screen Shot 2020-05-15 at 15.05.30
+		registered as also a user of material:  Screen Shot 2020-05-15 at 15.05.30
+		Custom split normals with tangents being used
+		num positions      :  24
+		num normals        :  24
+		num tangents       :  96
+		num uvs            :  48
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of node:  MIN#6
+	processing begun of mesh:  MIN#6_0
+		processing begun of material:  Color I01
+		registered as also a user of material:  Color I01
+		Custom split normals with tangents being used
+		num positions      :  135
+		num normals        :  135
+		num tangents       :  540
+		num uvs            :  270
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  60
+	processing begun of mesh:  MIN#6_1
+		processing begun of material:  Lisanne_Tool_Bag_01
+		registered as also a user of material:  Lisanne_Tool_Bag_01
+		Custom split normals with tangents being used
+		num positions      :  67
+		num normals        :  67
+		num tangents       :  268
+		num uvs            :  134
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  24
+	processing begun of mesh:  LUSH.022
+		mesh is an instance of :  LUSH.  Processing halted.
+	processing begun of mesh:  I___U
+		processing begun of material:  Lisanne_Tool_Bag_01
+		registered as also a user of material:  Lisanne_Tool_Bag_01
+		Custom split normals with tangents being used
+		num positions      :  34
+		num normals        :  34
+		num tangents       :  136
+		num uvs            :  68
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  30
+	processing begun of mesh:  MIDI_SQUARE#1
+		processing begun of material:  Color H06
+		registered as also a user of material:  Color H06
+		Custom split normals with tangents being used
+		num positions      :  24
+		num normals        :  24
+		num tangents       :  96
+		num uvs            :  48
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  MIDI_SQUARE#2
+		processing begun of material:  Color A05
+		registered as also a user of material:  Color A05
+		Custom split normals with tangents being used
+		num positions      :  24
+		num normals        :  24
+		num tangents       :  96
+		num uvs            :  48
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  MIDI_SQUARE#3
+		processing begun of material:  [Color L02] copy
+		registered as also a user of material:  [Color L02] copy
+		Custom split normals with tangents being used
+		num positions      :  24
+		num normals        :  24
+		num tangents       :  96
+		num uvs            :  48
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  MIN#10
+		processing begun of material:  B&W DIAG
+		registered as also a user of material:  B&W DIAG
+		Custom split normals with tangents being used
+		num positions      :  71
+		num normals        :  71
+		num tangents       :  284
+		num uvs            :  142
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  32
+	processing begun of mesh:  LUSH.023
+		mesh is an instance of :  LUSH.  Processing halted.
+	processing begun of mesh:  GOOD_LUCK
+		processing begun of material:  Lisanne_Tool_Bag_01
+		registered as also a user of material:  Lisanne_Tool_Bag_01
+		Custom split normals with tangents being used
+		num positions      :  306
+		num normals        :  306
+		num tangents       :  1224
+		num uvs            :  612
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  296
+	processing begun of mesh:  BOX#11
+		processing begun of material:  Color A05
+		registered as also a user of material:  Color A05
+		Custom split normals with tangents being used
+		num positions      :  344
+		num normals        :  344
+		num tangents       :  1376
+		num uvs            :  688
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  164
+	processing begun of mesh:  MAXI_EDXTRA
+		processing begun of material:  neongalactic
+		registered as also a user of material:  neongalactic
+		Custom split normals with tangents being used
+		num positions      :  24
+		num normals        :  24
+		num tangents       :  96
+		num uvs            :  48
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of node:  BOX#2
+	processing begun of mesh:  BOX#2_0
+		processing begun of material:  neongalactic
+		registered as also a user of material:  neongalactic
+		Custom split normals with tangents being used
+		num positions      :  215
+		num normals        :  215
+		num tangents       :  860
+		num uvs            :  430
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  116
+	processing begun of mesh:  BOX#2_1
+		processing begun of material:  Screen Shot 2020-05-15 at 15.05.30
+		registered as also a user of material:  Screen Shot 2020-05-15 at 15.05.30
+		Custom split normals with tangents being used
+		num positions      :  119
+		num normals        :  119
+		num tangents       :  476
+		num uvs            :  238
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  48
+	processing begun of mesh:  MIN#25
+		processing begun of material:  Color L05
+		registered as also a user of material:  Color L05
+		Custom split normals with tangents being used
+		num positions      :  76
+		num normals        :  76
+		num tangents       :  304
+		num uvs            :  152
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  32
+	processing begun of mesh:  LUSH.024
+		mesh is an instance of :  LUSH.  Processing halted.
+	processing begun of mesh:  25
+		processing begun of material:  Color F05
+		registered as also a user of material:  Color F05
+		Custom split normals with tangents being used
+		num positions      :  91
+		num normals        :  91
+		num tangents       :  364
+		num uvs            :  182
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  87
+	processing begun of mesh:  BOX#12
+		processing begun of material:  [Color L02] copy
+		registered as also a user of material:  [Color L02] copy
+		Custom split normals with tangents being used
+		num positions      :  336
+		num normals        :  336
+		num tangents       :  1344
+		num uvs            :  672
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  164
+	processing begun of light (POINT):  Light
+========= Writing of JSON file started =========
+	writing mesh:  box lid#2_0
+	writing mesh:  box lid#2_1
+	writing mesh:  box lid#2_2
+	writing mesh:  box 1#2_0
+	writing mesh:  box 1#2_1
+	writing mesh:  box 1#2_2
+	writing mesh:  box_1#10
+	writing mesh:  box_lid#10
+	writing mesh:  box_1#11
+	writing mesh:  box_lid#11
+	writing mesh:  BOX#13
+	writing mesh:  MIN#16
+	writing mesh:  LUSH
+	writing mesh:  hey
+	writing mesh:  MIN#1
+	writing mesh:  HAPPY_BIRTHDAY_M#1
+	writing mesh:  MIN#20
+	writing mesh:  JENNY
+	writing mesh:  MIN#2
+	writing mesh:  KEEP_WELL_LOVELY
+	writing mesh:  MIN#22
+	writing mesh:  18__SARA
+	writing mesh:  BOX#10
+	writing mesh:  MAXI#5
+	writing mesh:  MIN#24
+	writing mesh:  BATH__TIME
+	writing mesh:  MIN#17
+	writing mesh:  30TH
+	writing mesh:  MIDI_SQUARE#6
+	writing mesh:  MAXI_EDXTRA#2
+	writing mesh:  MAXI_EDXTRA#3
+	writing mesh:  MIN#11
+	writing mesh:  MAXI#1
+	writing mesh:  MAXI#2
+	writing mesh:  MAXI#3
+	writing mesh:  MIN#26
+	writing mesh:  NICOLE
+	writing mesh:  HELLO_MUM
+	writing mesh:  MIN#13
+	writing mesh:  JOHN
+	writing mesh:  MIN#15
+	writing mesh:  OK?
+	writing mesh:  MIN#12
+	writing mesh:  MERRY_XMAS_JOE!
+	writing mesh:  MIN#14
+	writing mesh:  HI!
+	writing mesh:  MAXI_EDXTRA#4
+	writing mesh:  MIDI_SQUARE#4
+	writing mesh:  MAXI#4
+	writing mesh:  MIN#21
+	writing mesh:  HAPPY_BIRTHDAY_R
+	writing mesh:  MIN#19
+	writing mesh:  HAVE__A__BATH
+	writing mesh:  MIN#18
+	writing mesh:  HAPPY_BIRTHDAY_K
+	writing mesh:  MIDI_SQUARE
+	writing mesh:  MIN#23
+	writing mesh:  HAPPY_XMAS
+	writing mesh:  MIN#27
+	writing mesh:  HAVE_A__GOOD_DAY
+	writing mesh:  MIN#3
+	writing mesh:  MIDI_SQUARE#5
+	writing mesh:  MIN#6_0
+	writing mesh:  MIN#6_1
+	writing mesh:  I___U
+	writing mesh:  MIDI_SQUARE#1
+	writing mesh:  MIDI_SQUARE#2
+	writing mesh:  MIDI_SQUARE#3
+	writing mesh:  MIN#10
+	writing mesh:  GOOD_LUCK
+	writing mesh:  BOX#11
+	writing mesh:  MAXI_EDXTRA
+	writing mesh:  BOX#2_0
+	writing mesh:  BOX#2_1
+	writing mesh:  MIN#25
+	writing mesh:  25
+	writing mesh:  BOX#12
+========= Writing of JSON file completed =========
+========= end of processing =========
+elapsed time:  0 min, 2.3209 secs
