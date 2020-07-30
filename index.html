@@ -5,76 +5,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
         <title>Babylon Template</title>
         <link rel="stylesheet" type="text/css" href="Assets/image-picker.css">
-        <style>
-            html, body {
-                overflow: hidden;
-                width: 100%;
-                height: 100%;
-                margin: 0;
-                padding-left: 10px;
-                padding-bottom: 10px;
-                padding-right: 50px;
-                font-family: "Helvetica"
-            }
-            
-
-
-            #renderCanvas {
-                width: 60%;
-                height: 60%;
-                touch-action: none;
-                float: right;
-            }
-            
-            #loadingScreen {
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                color: white;
-                font-size: 50px;
-                text-align: center;
-                background-color: #000000;
-                z-index: 9999;
-                top: 50%;
-                -ms-transform: translateY(-50%);
-                transform: translateY(-50%);
-            }
-            
-            
-            .loadingScreen {
-                position: relative;
-                width: 100%;
-                height: 50%;
-                color: white;
-                font-size: 100px;
-                text-align: center;
-                background-color: #000000;
-                z-index: 9999;
-                top: 50%;
-                -ms-transform: translateY(-50%);
-
-            }
-
-            
-            .image_picker_image {
-                max-width: 140px;
-                max-height: 100px;
-                background-color: #FF0000;
-            }
-            
-            #messageString {
-                width: 100%;
-                height: 100px;
-            }
-            
-            #left{
-                float: left;
-            }
-            
-            #right{
-                float: right;
-            }
-        </style>
+        <link rel="stylesheet" type="text/css" href="Assets/customisation.css">
         <script src="https://code.jquery.com/jquery-3.0.0.min.js" type="text/javascript"></script>
         <script src="https://preview.babylonjs.com/babylon.js"></script>
         <script src="https://cdn.babylonjs.com/loaders/babylonjs.loaders.min.js"></script>
@@ -82,7 +13,7 @@
         <script src="https://code.jquery.com/pep/0.4.3/pep.js"></script>
         <script src="http://code.jquery.com/jquery-latest.js"></script>
         <script src="Assets/image-picker.min.js"></script>
-        
+
     </head>
 
    <body>
@@ -97,10 +28,21 @@
             
         <div id="left">
             <form id="gui" > 
+                
+            <div class="picker">
+                <h3>Box Size:</h3>
+              <select id="boxSize" class="image-picker show-html"  onChange="onBoxSizeChange(this.value)">
+                <option selected value=0>Small Box</option>
+                <option value=1>Medium Box</option>
+                <option value=2>Large Box</option>
+              </select>
+            </div>
+                
+                
             <div class="picker">
                 <h3>Internal Box:</h3>
               <label for="template">Box color:</label>
-              <select id="internalBox" class="image-picker show-html"  onChange="onBoxInternalChange(this.Value)">
+              <select id="internalBox" class="image-picker show-html"  onChange="onBoxInternalChange(this.value)">
                 <option data-img-src="Assets/InternalBox/Image_2.jpg" selected value='Image_2.jpg'>Colour #1</option>
                 <option data-img-src="Assets/InternalBox/Image_1.jpg" value='Image_1.jpg'>Colour #2</option>
                 <option data-img-src="Assets/InternalBox/Image_14.png" value='Image_14.png'>Colour #3</option>
@@ -112,7 +54,7 @@
             <div class="picker">
                 <h3>Sleeve:</h3>
               <label for="template">Sleeve color:</label>
-              <select id="sleeve" class="image-picker show-html" onChange="onBoxSleeveChange(this.Value)">
+              <select id="sleeve" class="image-picker show-html" onChange="onBoxSleeveChange(this.value)">
                 <option data-img-src="Assets/Sleeve/Image_16.png" selected value='Image_16.png'>Colour #1</option>
                 <option data-img-src="Assets/Sleeve/Image_15.png" value='Image_15.png'>Colour #2</option>
                 <option data-img-src="Assets/Sleeve/Image_7.jpg" value='Image_7.jpg'>Colour #3</option>
@@ -123,7 +65,7 @@
             <br>
                 <h3>Message:</h3>
                 <br>
-            <textarea id="messageString" name="messageString" rows="3" cols="10" wrap="hard" maxlength="100">HAPPY
+            <textarea id="messageString" name="messageString" rows="3" cols="10" wrap="hard" maxlength="100" onInput="onTextChange(this.value)">HAPPY
 BIRTHDAY
 X</textarea>
             <br>
@@ -131,232 +73,55 @@ X</textarea>
 
             </form>
         </div>    
-        
-            
-        
            <canvas id="renderCanvas" touch-action="none"></canvas> <!-- touch-action="none" for best results from PEP -->
 
     </div>
        
     
     <script>
-        var canvas = document.getElementById("renderCanvas"); 
-        var engine = new BABYLON.Engine(canvas, true); 
-        var scene = null; 
-        var camera = null;
-        var box = null;
-
-        var internalBox = null;
-        var sleeve = null;
         
-        var size = 512;
-        var textBlock = new BABYLON.GUI.TextBlock("textBlock1");
-            
-        var advancedTexture = null;
+        window.onload = function(){
+            messageText = document.getElementById( 'messageString' ).value;
+            onBoxSleeveChange(document.getElementById( 'sleeve' ).value);
+            onBoxInternalChange(document.getElementById( 'internalBox' ).value);
+        }
         
-        function initLoading(){
-            var loadingScreenDiv = window.document.getElementById("loadingScreen");
-
-            function customLoadingScreen() {
-                console.log("customLoadingScreen creation")
+        function onTextChange(value){
+            messageText = value;
+        }
+        
+        function onBoxSleeveChange(value){
+           sleeveTexturePath = "Assets/Sleeve/" + value;
+            sleeveChange();
+           if (value == "Image_16.png"){
+                textColor = "#e71587";
             }
-            customLoadingScreen.prototype.displayLoadingUI = function () {
-                console.log("customLoadingScreen loading")
-            //    loadingScreenDiv.innerHTML = "loading";
-            };
-            customLoadingScreen.prototype.hideLoadingUI = function () {
-                console.log("customLoadingScreen loaded")
-                loadingScreenDiv.style.display = "none";
-            };
-            var loadingScreen = new customLoadingScreen();
-            engine.loadingScreen = loadingScreen;
+            if (value == "Image_15.png"){
+                textColor = "#8aff00";
+            }
+            if (value == "Image_7.jpg"){
+                textColor = "#FF0000";
+            }
+            if (value == "Image_5.jpg"){
+                textColor = "#e71587";
+            }
+        }
+        
+        function onBoxSizeChange(value){
+            boxIndex = value;
+        }
 
-            engine.displayLoadingUI();
-
+        function onBoxInternalChange(value){
+            baseBoxTexturePath = "Assets/InternalBox/" + value;
+            baseBoxChange();
+            
+            
         }
         
         
-        
-        function changeBox( value ){
-            
-            if (scene != null){
-                scene.dispose();
-            }
-            
-            scene = new BABYLON.Scene(engine);
-            scene.createDefaultCameraOrLight(true, true, true);
 
-            var camera = new BABYLON.ArcRotateCamera("Camera", 0, 0.8, 1, new BABYLON.Vector3(0, 0, 0), scene);
-            scene.activeCamera.target = new BABYLON.Vector3(0, 0, 0);
-            scene.activeCamera.setPosition(new BABYLON.Vector3(-0.5, 1.0, -0.5));
-            scene.activeCamera.attachControl(canvas, false);
-
-            scene.clearColor = new BABYLON.Color4(0, 0, 0, 0);
-            scene.ambientColor = new BABYLON.Color3(1.0, 1.0, 1.0);
-
-            var light = new BABYLON.HemisphericLight("light1", new BABYLON.Vector3(-1, 1, -0.5), scene);
-            light.intensity = 0.7;
-
-            
-            
-            box = BABYLON.SceneLoader.Append("./models/", value, scene, () => {
-             
-                internalBox = scene.getNodeByName("internalBox")
-                sleeve = scene.getNodeByName("sleeve")
-                
-                internalBox.position.y = internalBox.position.y -0.15;
-                sleeve.position.y = sleeve.position.y -0.15;
-                
-                createAdvancedTexture( 0.31, box, scene, 0);
-                
-                onBoxInternalChange();
-                onBoxSleeveChange();
-                
-                engine.hideLoadingUI();
-            });
-        }
-        
-
-        
-        
-        function createAdvancedTexture(length, parent, scene, pos){
-            var height=length;
-            
-            var textBlock = createText(length.toString());
-            textBlock.width = length * 3;
-            textBlock.height = height * 3;
-            
-            //Create plane
-            var plane = BABYLON.MeshBuilder.CreatePlane("plane", {width:length, height:length}, scene);
-            plane.rotation = new BABYLON.Vector3( 1.5708, 0, 0 );
-            
-            plane.position.y = 0.121;
-            plane.position.x = 0.01;
-            
-            advancedTexture = BABYLON.GUI.AdvancedDynamicTexture.CreateForMesh(plane);  
-            //advancedTexture.background = "white";
-            advancedTexture.addControl(textBlock); 
-
-        }
-
-        
-        
-        function createText(text){
-            textBlock.fontFamily = "Helvetica";
-            textBlock.text = text;
-            textBlock.textHorizontalAlignment = BABYLON.GUI.Control.HORIZONTAL_ALIGNMENT_LEFT;
-            textBlock.color = "black";
-
-            return textBlock;
-        }
-        
-        
-        
-        // *********************
-        function changeText(){
-            
-            if (advancedTexture != null){
-                
-                var textChanged = false;
-            if (textBlock.text != document.getElementById( 'messageString' ).value) {
-                textChanged = true;
-            } 
-            textBlock.text = document.getElementById( 'messageString' ).value;
-            var ctx = advancedTexture.getContext();
-            
-            if (textChanged){
-                var lines = textBlock.text.split('\n');
-                var largestLine = "";
-                var largestLineSize = 0
-                for(var i = 0;i < lines.length;i++){
-                    var s = ctx.measureText(lines[i]).width;
-                    if (s > largestLineSize){
-                        largestLineSize = s;
-                        largestLine = lines[i];
-                    }
-                }
-
-                var i = 700;
-                for(; i > 1; i = i - 0.1) {
-                    ctx.font = `${i}px arial`;
-                    var width = ctx.measureText(largestLine).width;
-                    if (width < 900) {
-                        break;
-                    }
-                }
-                textBlock.fontSize = i;
-            }
-            
-            if (document.getElementById( 'sleeve' ).value == "Image_16.png"){
-                textBlock.color = "#e71587";
-            }
-            if (document.getElementById( 'sleeve' ).value == "Image_15.png"){
-                textBlock.color = "#8aff00";
-            }
-            if (document.getElementById( 'sleeve' ).value == "Image_7.jpg"){
-                
-                textBlock.color = "#FF0000";
-            }
-            if (document.getElementById( 'sleeve' ).value == "Image_5.jpg"){
-                textBlock.color = "#e71587";
-            }
-            
-            
-            textBlock.textWrapping = true;
-            textBlock.lineSpacing = "10px";
-            }
-            
-            
-        }
-        // *********************
-        
-        
-        
-        function onBoxSleeveChange(){
-            var myMaterial = new BABYLON.StandardMaterial("myMaterial", scene);
-            myMaterial.diffuseTexture = new BABYLON.Texture("Assets/Sleeve/" + document.getElementById( 'sleeve' ).value, scene);
-            myMaterial.bumpTexture = new BABYLON.Texture("Assets/cardboard.jpg", scene);
-            myMaterial.bumpTexture.level = 0.15;
-            myMaterial.glossiness = 1.0;
-            myMaterial.metallic = 1.0;
-            myMaterial.roughness = 0.0;
-            myMaterial.specularColor = new BABYLON.Color3(0.5, 0.5, 0.5);
-            sleeve.material = myMaterial
-            
-
-        }
-        
-        
-        function onBoxInternalChange(){
-            var myMaterial = new BABYLON.StandardMaterial("myMaterial", scene);
-            myMaterial.diffuseTexture = new BABYLON.Texture("Assets/InternalBox/" + document.getElementById( 'internalBox' ).value, scene);
-            myMaterial.bumpTexture = new BABYLON.Texture("Assets/cardboard.jpg", scene);
-            myMaterial.bumpTexture.level = 0.15;
-            myMaterial.glossiness = 0.5;
-            myMaterial.metallic = 0.5;
-            myMaterial.roughness = 0.5;
-            myMaterial.specularColor = new BABYLON.Color3(0.2, 0.2, 0.2);
-            internalBox.material = myMaterial
-        }
-        
-        initLoading();
-        changeBox( "Box.gltf" );
-        
-       
-        // Register a render loop to repeatedly render the scene
-        engine.runRenderLoop(function () {
-            scene.render();
-            changeText();
-
-            
-        });
-
-        // Watch for browser/canvas resize events
-        window.addEventListener("resize", function () {
-                engine.resize();
-        });
     </script>
-    
+       <script src="Assets/customisation.js"></script>
       <script type="text/javascript">
 
         jQuery("select.image-picker").imagepicker({
