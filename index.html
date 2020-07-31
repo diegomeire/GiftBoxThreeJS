@@ -23,10 +23,10 @@
        
        <div>
         <br>    
-        <h1>Gift Customisation</h1>
+        <h1>Settings</h1>
             
             
-        <div id="left">
+        <div id="settings">
             <form id="gui" > 
                 
             <div class="picker">
@@ -71,12 +71,29 @@ X</textarea>
             <br>
 
 
+                
+                
             </form>
-        </div>    
-           <canvas id="renderCanvas" touch-action="none"></canvas> <!-- touch-action="none" for best results from PEP -->
+        </div>
+           
+           
+           
 
-    </div>
+        </div>
+           <div id="renderBlock">
+               <h1 class="divTitle">Preview</h1>
+                <canvas id="renderCanvas" touch-action="none"></canvas> <!-- touch-action="none" for best results from PEP -->
+               <button id="renderButton" type="button" onClick="onRenderClick()">Render</button>
+            
+           </div>
+        
        
+       
+             <div id="rendered">
+                 <h1 class="divTitle">Rendered</h1>
+                 <div id="innerRendered">
+                 </div>
+       </div>
     
     <script>
         
@@ -88,6 +105,11 @@ X</textarea>
         
         function onTextChange(value){
             messageText = value;
+        }
+        
+        function onRenderClick(){
+            console.log("clicked");
+            renderToImage();
         }
         
         function onBoxSleeveChange(value){

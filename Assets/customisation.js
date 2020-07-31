@@ -71,8 +71,20 @@ function baseBoxChange(){
     
 }
 
-
-
+function renderToImage(){
+            scene.activeCamera.target = new BABYLON.Vector3(0, 0, 0);
+            scene.activeCamera.setPosition(new BABYLON.Vector3(-0.2, 0.2, -0.2));
+    BABYLON.Tools.CreateScreenshotUsingRenderTarget(engine, scene.activeCamera, {width: 500, height: 500},
+       function (data) {
+          var node= document.getElementById("innerRendered");
+          node.querySelectorAll('*').forEach(n => n.remove());
+          var img = document.createElement("img");
+        img.id = "img";
+          img.src = data;
+          node.appendChild(img);
+       });
+}
+    
 (function () {
     
    var boxFile = "";
@@ -110,9 +122,9 @@ function baseBoxChange(){
             scene = new BABYLON.Scene(engine);
             scene.createDefaultCameraOrLight(true, true, true);
 
-            var camera = new BABYLON.ArcRotateCamera("Camera", 0, 0.8, 1, new BABYLON.Vector3(0, 0, 0), scene);
+            camera = new BABYLON.ArcRotateCamera("Camera", 0, 0.8, 1, new BABYLON.Vector3(0, 0, 0), scene);
             scene.activeCamera.target = new BABYLON.Vector3(0, 0, 0);
-            scene.activeCamera.setPosition(new BABYLON.Vector3(-0.2, 0.5, -0.2));
+            scene.activeCamera.setPosition(new BABYLON.Vector3(-0.2, 0.2, -0.2));
             scene.activeCamera.attachControl(canvas, false);
 
             scene.clearColor = new BABYLON.Color4(0, 0, 0, 0);
@@ -243,6 +255,7 @@ function baseBoxChange(){
         window.addEventListener("resize", function () {
                 engine.resize();
         });
+
     }
 
     
