@@ -1,0 +1,80 @@
+<script src="https://threejs.org/build/three.min.js"></script>
+<link rel="stylesheet" type="text/css" href="index.css" >
+<div>
+    <form id="gui" >
+    <br>
+    <h1>Google's Model Viewer</h1>
+
+    <label for="wrapColor">Choose a ribbon color:</label> <br>
+    <select name="wrapColor" id="wrapColor" style="width:200px" onChange="onColorChange(this.Value)">
+      <option value="01">Green</option>
+      <option value="02">Blue</option>
+      <option value="03">Red</option>
+    </select>
+
+
+    <br>
+    <br>
+    <br>
+
+    <label for="ribbonColor">Choose a wrap color:</label> <br>
+    <select name="ribbonColor" id="ribbonColor" style="width:200px" onChange="onColorChange(this.Value)">
+      <option value="01">Green</option>
+      <option value="02">Blue</option>
+      <option value="03">Red</option>
+    </select>
+
+    </form>
+</div>
+<div id="subframe">
+    <div id="container">
+
+    <model-viewer id="preview3d" style="width:50%;height:50%" src="https://diegomeire.github.io/EcommerceAR/assets/Gift0101.gltf" ios-src="https://diegomeire.github.io/EcommerceAR/assets/GiftBox0101.usdz" alt="3D visualization" shadow-intensity="1" camera-controls interaction-prompt="auto" auto-rotate ar magic-leap data-js-focus-visible/>
+
+    </div>
+</div>
+<!--<script src="main.js" type ="module"></script>-->
+
+<script type="module" src="https://unpkg.com/@google/model-viewer@v0.9.0/dist/model-viewer.js"></script>
+<script nomodule="" src="https://unpkg.com/@google/model-viewer@v0.9.0/dist/model-viewer-legacy.js"></script>
+<script>
+    function onColorChange(){
+        console.log( document.getElementById('wrapColor').value + document.getElementById('ribbonColor').value );
+        if ((document.getElementById('wrapColor').value == "01") && (document.getElementById('ribbonColor').value == "01")){
+            document.getElementById( 'preview3d' ).setAttribute("src", "https://diegomeire.github.io/EcommerceAR/assets/Gift0101.gltf");
+            document.getElementById( 'preview3d' ).setAttribute("ios-src", "https://diegomeire.github.io/EcommerceAR/assets/GiftBox0101.usdz");
+        }
+        if ((document.getElementById('wrapColor').value == "01") && (document.getElementById('ribbonColor').value == "02")){
+            document.getElementById( 'preview3d' ).setAttribute("src", "https://diegomeire.github.io/EcommerceAR/assets/Gift0102.gltf");
+            document.getElementById( 'preview3d' ).setAttribute("ios-src", "https://diegomeire.github.io/EcommerceAR/assets/GiftBox0102.usdz");
+        }
+        if ((document.getElementById('wrapColor').value == "01") && (document.getElementById('ribbonColor').value == "03")){
+            document.getElementById( 'preview3d' ).setAttribute("src", "https://diegomeire.github.io/EcommerceAR/assets/Gift0103.gltf");
+            document.getElementById( 'preview3d' ).setAttribute("ios-src", "https://diegomeire.github.io/EcommerceAR/assets/GiftBox0103.usdz");
+        }
+        if ((document.getElementById('wrapColor').value == "02") && (document.getElementById('ribbonColor').value == "01")){
+            document.getElementById( 'preview3d' ).setAttribute("src", "https://diegomeire.github.io/EcommerceAR/assets/Gift0201.gltf");
+            document.getElementById( 'preview3d' ).setAttribute("ios-src", "https://diegomeire.github.io/EcommerceAR/assets/GiftBox0201.usdz");
+        }
+        if ((document.getElementById('wrapColor').value == "02") && (document.getElementById('ribbonColor').value == "02")){
+            document.getElementById( 'preview3d' ).setAttribute("src", "https://diegomeire.github.io/EcommerceAR/assets/Gift0202.gltf");
+            document.getElementById( 'preview3d' ).setAttribute("ios-src", "https://diegomeire.github.io/EcommerceAR/assets/GiftBox2102.usdz");
+        }
+        if ((document.getElementById('wrapColor').value == "02") && (document.getElementById('ribbonColor').value == "03")){
+            document.getElementById( 'preview3d' ).setAttribute("src", "https://diegomeire.github.io/EcommerceAR/assets/Gift0203.gltf");
+            document.getElementById( 'preview3d' ).setAttribute("ios-src", "https://diegomeire.github.io/EcommerceAR/assets/GiftBox2103.usdz");
+        }
+        if ((document.getElementById('wrapColor').value == "03") && (document.getElementById('ribbonColor').value == "01")){
+            document.getElementById( 'preview3d' ).setAttribute("src", "https://diegomeire.github.io/EcommerceAR/assets/Gift0301.gltf");
+            document.getElementById( 'preview3d' ).setAttribute("ios-src", "https://diegomeire.github.io/EcommerceAR/assets/GiftBox0301.usdz");
+        }
+        if ((document.getElementById('wrapColor').value == "03") && (document.getElementById('ribbonColor').value == "02")){
+            document.getElementById( 'preview3d' ).setAttribute("src", "https://diegomeire.github.io/EcommerceAR/assets/Gift0302.gltf");
+            document.getElementById( 'preview3d' ).setAttribute("ios-src", "https://diegomeire.github.io/EcommerceAR/assets/GiftBox0302.usdz");
+        }
+        if ((document.getElementById('wrapColor').value == "03") && (document.getElementById('ribbonColor').value == "03")){
+            document.getElementById( 'preview3d' ).setAttribute("src", "https://diegomeire.github.io/EcommerceAR/assets/Gift0303.gltf");
+            document.getElementById( 'preview3d' ).setAttribute("ios-src", "https://diegomeire.github.io/EcommerceAR/assets/GiftBox0303.usdz");
+        }
+    }
+</script>
